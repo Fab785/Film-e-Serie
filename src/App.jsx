@@ -1,64 +1,100 @@
-import { useState } from "react";
-import MovieCard from "./components/MovieCard";
-import SearchBar from "./components/SearchBar";
-import GenreFilter from "./components/GenreFilter";
+import { useState } from "react"
+import Sidebar from "./components/Sidebar"
+import Hero from "./components/Hero"
+import MovieCard from "./components/MovieCard"
+
+// 🔹 Manual data (easy to add new items)
+const movies = [
+  {
+    id: 1,
+    title: "Batman",
+    image: "https://m.media-amazon.com/images/I/71niXI3lxlL._AC_SL1024_.jpg",
+  },
+  {
+    id: 2,
+    title: "Inception",
+    image: "https://m.media-amazon.com/images/I/91kFYg4fX3L._AC_SL1500_.jpg",
+  },
+]
+
+const tvShows = [
+  {
+    id: 1,
+    title: "Breaking Bad",
+    image: "https://m.media-amazon.com/images/I/81p+xe8cbnL._AC_SL1500_.jpg",
+  },
+  {
+    id: 2,
+    title: "Stranger Things",
+    image: "https://m.media-amazon.com/images/I/81vG7JYFZKL._AC_SL1500_.jpg",
+  },
+]
 
 function App() {
-  const [searchText, setSearchText] = useState("");
-  const [genre, setGenre] = useState("All");
-
-  const movies = [
-    {
-      id: 1,
-      title: "Batman",
-      genre: "Action",
-      image:
-        "https://m.media-amazon.com/images/I/71niXI3lxlL._AC_SL1024_.jpg",
-      description: "Dark and intense story in Gotham City",
-    },
-    {
-      id: 2,
-      title: "Inception",
-      genre: "Sci-Fi",
-      image:
-        "https://m.media-amazon.com/images/I/51sV6eDM8VL._AC_.jpg",
-      description: "Dream within a dream heist.",
-    },
-    // add more sample movies here later
-  ];
-
-  const filteredMovies = movies.filter((movie) => {
-    return (
-      (genre === "All" || movie.genre === genre) &&
-      movie.title.toLowerCase().includes(searchText.toLowerCase())
-    );
-  });
+  const [activeSection, setActiveSection] = useState("home")
 
   return (
-    <div
-      style={{
-        background: "#141414",
-        color: "white",
-        minHeight: "100vh",
-        padding: "20px",
-        fontFamily: "Arial, sans-serif",
-      }}
-    >
-      <header style={{ display: "flex", alignItems: "center", marginBottom: "20px" }}>
-        <h1 style={{ flexGrow: 1 }}>🎬 My Movie Catalog</h1>
-        <SearchBar searchText={searchText} setSearchText={setSearchText} />
-        <GenreFilter genre={genre} setGenre={setGenre} />
-      </header>
+    <div style={styles.app}>
+      <Sidebar active={activeSection} setActive={setActiveSection} />
 
-      <div style={{ display: "flex", flexWrap: "wrap", gap: "20px" }}>
-        {filteredMovies.map((movie) => (
-          <MovieCard key={movie.id} {...movie} />
-        ))}
-      </div>
+      <main style={styles.main}>
+        {activeSection === "home" && <Hero />}
+
+        {activeSection === "movies" && (
+          <>
+            <h2 style={styles.title}>Movies</h2>
+            <div style={styles.grid}>
+              {movies.map((movie) => (
+                <MovieCard
+                  key={movie.id}
+                  title={movie.title}
+                  image={movie.image}
+                />
+              ))}
+            </div>
+          </>
+        )}
+
+        {activeSection === "tv" && (
+          <>
+            <h2 style={styles.title}>TV Shows</h2>
+            <div style={styles.grid}>
+              {tvShows.map((show) => (
+                <MovieCard
+                  key={show.id}
+                  title={show.title}
+                  image={show.image}
+                />
+              ))}
+            </div>
+          </>
+        )}
+      </main>
     </div>
-  );
+  )
 }
 
-export default App;
+const styles = {
+  app: {
+    display: "flex",
+    minHeight: "100vh",
+    background: "#141414",
+    color: "#fff",
+  },
+  main: {
+    flex: 1,
+    padding: "30px",
+  },
+  title: {
+    fontSize: "26px",
+    marginBottom: "20px",
+  },
+  grid: {
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fill, minmax(180px, 1fr))",
+    gap: "20px",
+  },
+}
 
+export default App
 
