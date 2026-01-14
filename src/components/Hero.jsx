@@ -1,15 +1,22 @@
 // Hero.jsx
 const posters = [
+    // Wonder Woman (Original)
     "https://image.tmdb.org/t/p/original/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg",
-    "https://image.tmdb.org/t/p/original/rr7E0NoGKxvbkb89eR1GwfoYjpA.jpg",
-    "https://image.tmdb.org/t/p/original/9O1Iy9od7xw9GJ8WZc0bJwZb1YF.jpg",
+  
+    // Batman (Original poster from The Dark Knight)
     "https://image.tmdb.org/t/p/original/qJ2tW6WMUDux911r6m7haRef0WH.jpg",
+  
+    // Spider-Man (2002)
+  "https://image.tmdb.org/t/p/original/lmZFxXgJE3vgrciwuDib0N8CfQo.jpg",
+
+  
+    // Superman (2025 Film) — real poster image example
+    "https://image.tmdb.org/t/p/original/aw1TAKdfjl69fNvx4PfqyehcPNJ.jpg"
   ]
   
   const Hero = () => {
     return (
       <div style={styles.hero}>
-        {/* Posters side by side */}
         {posters.map((img, index) => (
           <div
             key={index}
@@ -20,10 +27,8 @@ const posters = [
           />
         ))}
   
-        {/* Overlay */}
         <div style={styles.overlay} />
   
-        {/* Content */}
         <div style={styles.content}>
           <h1 style={styles.title}>Tonight’s Picks</h1>
           <p style={styles.subtitle}>
@@ -38,12 +43,11 @@ const posters = [
   const styles = {
     hero: {
       display: "flex",
-      height: "100vh",       // full viewport height
-      width: "100vw",        // full viewport width
-      position: "fixed",     // ignore parent padding
-      top: 0,
-      left: 0,
-      zIndex: 0,
+      flexDirection: "row",
+      gap: "5px",
+      width: "100vw",
+      height: "100vh",
+      position: "relative",
     },
     poster: {
       flex: 1,
@@ -75,6 +79,9 @@ const posters = [
   }
   
   export default Hero
+  
+  
+  
   
 
   
