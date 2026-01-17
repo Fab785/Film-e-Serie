@@ -1,25 +1,47 @@
-// App.jsx
 import { useState } from "react"
 import Hero from "./components/Hero"
 import MovieCard from "./components/MovieCard"
 
 const movies = [
-  { id: 1, title: "Batman", image: "https://m.media-amazon.com/images/I/71niXI3lxlL._AC_SL1024_.jpg" },
-  { id: 2, title: "Inception", image: "https://m.media-amazon.com/images/I/91kFYg4fX3L._AC_SL1500_.jpg" },
+  {
+    id: 1,
+    title: "Batman",
+    image: "https://m.media-amazon.com/images/I/71niXI3lxlL._AC_SL1024_.jpg",
+  },
+  {
+    id: 2,
+    title: "Inception",
+    image: "https://m.media-amazon.com/images/I/91kFYg4fX3L._AC_SL1500_.jpg",
+  },
 ]
 
 const tvShows = [
-  { id: 1, title: "Breaking Bad", image: "https://m.media-amazon.com/images/I/81p+xe8cbnL._AC_SL1500_.jpg" },
-  { id: 2, title: "Stranger Things", image: "https://m.media-amazon.com/images/I/81vG7JYFZKL._AC_SL1500_.jpg" },
+  {
+    id: 1,
+    title: "Breaking Bad",
+    image: "https://m.media-amazon.com/images/I/81p+xe8cbnL._AC_SL1500_.jpg",
+  },
+  {
+    id: 2,
+    title: "Stranger Things",
+    image: "https://m.media-amazon.com/images/I/81vG7JYFZKL._AC_SL1500_.jpg",
+  },
 ]
 
 function App() {
   const [activeSection, setActiveSection] = useState("home")
   const [searchQuery, setSearchQuery] = useState("")
+  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [modalType, setModalType] = useState(null)
+
+  const openModal = (type) => {
+    setModalType(type)
+    setIsModalOpen(true)
+  }
 
   return (
     <div style={styles.app}>
-      {/* Navbar */}
+      {/* NAVBAR */}
       <nav style={styles.navbar}>
         <div style={styles.navLeft}>
           <button
@@ -28,21 +50,16 @@ function App() {
           >
             Home
           </button>
-          <button
-            style={activeSection === "movies" ? styles.activeBtn : styles.btn}
-            onClick={() => setActiveSection("movies")}
-          >
+
+          <button style={styles.btn} onClick={() => openModal("movies")}>
             Movies
           </button>
-          <button
-            style={activeSection === "tv" ? styles.activeBtn : styles.btn}
-            onClick={() => setActiveSection("tv")}
-          >
+
+          <button style={styles.btn} onClick={() => openModal("tv")}>
             TV Shows
           </button>
         </div>
 
-        {/* Search bar */}
         <input
           type="text"
           placeholder="Search..."
@@ -52,30 +69,50 @@ function App() {
         />
       </nav>
 
-      {/* Main content */}
+      {/* MAIN */}
       <main style={styles.main}>
         {activeSection === "home" && <Hero />}
-
-        {activeSection === "movies" && (
-          <div style={styles.grid}>
-            {movies
-              .filter((m) => m.title.toLowerCase().includes(searchQuery.toLowerCase()))
-              .map((movie) => (
-                <MovieCard key={movie.id} title={movie.title} image={movie.image} />
-              ))}
-          </div>
-        )}
-
-        {activeSection === "tv" && (
-          <div style={styles.grid}>
-            {tvShows
-              .filter((s) => s.title.toLowerCase().includes(searchQuery.toLowerCase()))
-              .map((show) => (
-                <MovieCard key={show.id} title={show.title} image={show.image} />
-              ))}
-          </div>
-        )}
       </main>
+
+      {/* MODAL */}
+      {isModalOpen && (
+        <div
+          style={styles.modalOverlay}
+          onClick={() => setIsModalOpen(false)}
+        >
+          <div
+            style={styles.modal}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <h2 style={styles.modalTitle}>
+              {modalType === "movies" ? "Movies" : "TV Shows"}
+            </h2>
+
+            <div style={styles.grid}>
+              {(modalType === "movies" ? movies : tvShows)
+                .filter((item) =>
+                  item.title
+                    .toLowerCase()
+                    .includes(searchQuery.toLowerCase())
+                )
+                .map((item) => (
+                  <MovieCard
+                    key={item.id}
+                    title={item.title}
+                    image={item.image}
+                  />
+                ))}
+            </div>
+
+            <button
+              style={styles.closeBtn}
+              onClick={() => setIsModalOpen(false)}
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   )
 }
@@ -84,59 +121,99 @@ const styles = {
   app: {
     background: "#141414",
     color: "#fff",
-    margin: 0,
+    minHeight: "100vh",
   },
+
   navbar: {
     position: "fixed",
     top: 0,
     left: 0,
     width: "100%",
+    height: "80px",
+    background: "#000",
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    padding: "20px 40px",
-    background: "#000",
+    padding: "0 40px",
     zIndex: 10,
   },
+
   navLeft: {
     display: "flex",
-    gap: "40px",
+    gap: "30px",
   },
+
   btn: {
     background: "none",
     border: "none",
     color: "#aaa",
-    fontSize: "20px",
+    fontSize: "18px",
     cursor: "pointer",
   },
+
   activeBtn: {
     background: "none",
     border: "none",
     color: "#fff",
-    fontSize: "20px",
+    fontSize: "18px",
     fontWeight: "bold",
     cursor: "pointer",
   },
+
   searchBar: {
     padding: "8px 12px",
     borderRadius: "8px",
     border: "none",
-    fontSize: "16px",
     outline: "none",
   },
+
   main: {
-    marginTop: "80px", // push content below navbar
-    width: "100%",
+    marginTop: "80px",
   },
+
+  /* MODAL */
+  modalOverlay: {
+    position: "fixed",
+    inset: 0,
+    background: "rgba(0,0,0,0.75)",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    zIndex: 100,
+  },
+
+  modal: {
+    background: "#111",
+    padding: "30px",
+    borderRadius: "12px",
+    width: "90%",
+    maxWidth: "1000px",
+    maxHeight: "80vh",
+    overflowY: "auto",
+  },
+
+  modalTitle: {
+    marginBottom: "20px",
+    fontSize: "26px",
+  },
+
   grid: {
     display: "grid",
     gridTemplateColumns: "repeat(auto-fill, minmax(180px, 1fr))",
     gap: "20px",
-    padding: "20px",
+  },
+
+  closeBtn: {
+    marginTop: "25px",
+    padding: "10px 20px",
+    borderRadius: "8px",
+    border: "none",
+    cursor: "pointer",
   },
 }
 
 export default App
+
 
 
 
