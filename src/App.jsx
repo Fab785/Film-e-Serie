@@ -23,8 +23,8 @@ const tvShows = [
   },
   {
     id: 2,
-    title: "Stranger Things",
-    image: "https://m.media-amazon.com/images/I/81vG7JYFZKL._AC_SL1500_.jpg",
+    title: "Only Murders in the Building",
+    image: "https://image.tmdb.org/t/p/w1280/1yjFVQZuW8aofZ5Cgol8iImsVFp.jpg",
   },
 ]
 
