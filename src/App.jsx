@@ -1,76 +1,63 @@
 import { useState } from "react"
 import Hero from "./components/Hero"
 import MovieCard from "./components/MovieCard"
-import MovieDetailModal from "./components/MovieDetailModal"
 import movies from "./data/movies"
 import tvShows from "./data/tvShows"
 
 function App() {
-  const [activeSection, setActiveSection] = useState("home")
-  const [searchQuery, setSearchQuery] = useState("")
-  const [modalType, setModalType] = useState(null)
-  const [selectedMovie, setSelectedMovie] = useState(null)
+  const [page, setPage] = useState("home")
+  const [search, setSearch] = useState("")
 
   const data =
-    modalType === "movies" ? movies :
-    modalType === "tv" ? tvShows :
+    page === "movies" ? movies :
+    page === "tv" ? tvShows :
     []
 
   return (
     <div style={styles.app}>
-      {/* NAVBAR */}
+      {/* NAVBAR – ALWAYS VISIBLE */}
       <nav style={styles.navbar}>
-        <div style={styles.navLeft}>
-          <button onClick={() => setActiveSection("home")}>Home</button>
-          <button onClick={() => setModalType("movies")}>Movies</button>
-          <button onClick={() => setModalType("tv")}>TV Shows</button>
+        <div style={styles.left}>
+          <button style={styles.btn} onClick={() => setPage("home")}>
+            Home
+          </button>
+          <button style={styles.btn} onClick={() => setPage("movies")}>
+            Movies
+          </button>
+          <button style={styles.btn} onClick={() => setPage("tv")}>
+            TV Shows
+          </button>
         </div>
 
-        <input
-          placeholder="Search..."
-          value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
-          style={styles.search}
-        />
+        {page !== "home" && (
+          <input
+            placeholder="Search..."
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            style={styles.search}
+          />
+        )}
       </nav>
 
-      {/* MAIN */}
-      <main style={{ marginTop: "80px" }}>
-        {activeSection === "home" && <Hero />}
-      </main>
+      {/* CONTENT */}
+      <main style={styles.main}>
+        {page === "home" && <Hero />}
 
-      {/* MOVIE LIST MODAL */}
-      {modalType && (
-        <div style={styles.overlay} onClick={() => setModalType(null)}>
-          <div style={styles.modal} onClick={(e) => e.stopPropagation()}>
-            <h2>
-              {modalType === "movies" ? "Movies" : "TV Shows"}
-            </h2>
-
-            <div style={styles.grid}>
-              {data
-                .filter((item) =>
-                  item.title.toLowerCase().includes(searchQuery.toLowerCase())
-                )
-                .map((item) => (
-                  <MovieCard
-                    key={item.id}
-                    movie={item}
-                    onClick={setSelectedMovie}
-                  />
-                ))}
-            </div>
+        {page !== "home" && (
+          <div style={styles.grid}>
+            {data
+              .filter((item) =>
+                item.title.toLowerCase().includes(search.toLowerCase())
+              )
+              .map((item) => (
+                <MovieCard
+                  key={item.id}
+                  movie={item}
+                />
+              ))}
           </div>
-        </div>
-      )}
-
-      {/* DETAIL MODAL */}
-      {selectedMovie && (
-        <MovieDetailModal
-          movie={selectedMovie}
-          onClose={() => setSelectedMovie(null)}
-        />
-      )}
+        )}
+      </main>
     </div>
   )
 }
@@ -80,7 +67,9 @@ const styles = {
     background: "#141414",
     minHeight: "100vh",
     color: "#fff",
+    overflowX: "hidden",
   },
+
   navbar: {
     position: "fixed",
     top: 0,
@@ -89,40 +78,37 @@ const styles = {
     height: "80px",
     background: "#000",
     display: "flex",
-    justifyContent: "space-between",
     alignItems: "center",
+    justifyContent: "space-between",
     padding: "0 30px",
     zIndex: 10,
   },
-  navLeft: {
+
+  left: {
     display: "flex",
     gap: "20px",
   },
+
+  btn: {
+    background: "none",
+    border: "none",
+    color: "#fff",
+    fontSize: "18px",
+    cursor: "pointer",
+  },
+
   search: {
     padding: "8px 12px",
     borderRadius: "8px",
     border: "none",
   },
-  overlay: {
-    position: "fixed",
-    inset: 0,
-    background: "rgba(0,0,0,0.75)",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    zIndex: 100,
+
+  main: {
+    marginTop: "80px", // space for navbar
   },
-  modal: {
-    background: "#111",
-    padding: "25px",
-    borderRadius: "12px",
-    maxWidth: "1000px",
-    width: "90%",
-    maxHeight: "80vh",
-    overflowY: "auto",
-  },
+
   grid: {
-    marginTop: "20px",
+    padding: "20px",
     display: "grid",
     gridTemplateColumns: "repeat(auto-fill, minmax(180px, 1fr))",
     gap: "20px",
@@ -130,7 +116,6 @@ const styles = {
 }
 
 export default App
-
 
 
 
