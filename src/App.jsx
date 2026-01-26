@@ -1,12 +1,14 @@
 import { useState } from "react"
 import Hero from "./components/Hero"
 import MovieCard from "./components/MovieCard"
+import MovieDetailModal from "./components/MovieDetailModal"
 import movies from "./data/movies"
 import tvShows from "./data/tvShows"
 
 function App() {
   const [page, setPage] = useState("home")
   const [search, setSearch] = useState("")
+  const [selectedMovie, setSelectedMovie] = useState(null)
 
   const data =
     page === "movies" ? movies :
@@ -18,15 +20,9 @@ function App() {
       {/* NAVBAR – ALWAYS VISIBLE */}
       <nav style={styles.navbar}>
         <div style={styles.left}>
-          <button style={styles.btn} onClick={() => setPage("home")}>
-            Home
-          </button>
-          <button style={styles.btn} onClick={() => setPage("movies")}>
-            Movies
-          </button>
-          <button style={styles.btn} onClick={() => setPage("tv")}>
-            TV Shows
-          </button>
+          <button style={styles.btn} onClick={() => setPage("home")}>Home</button>
+          <button style={styles.btn} onClick={() => setPage("movies")}>Movies</button>
+          <button style={styles.btn} onClick={() => setPage("tv")}>TV Shows</button>
         </div>
 
         {page !== "home" && (
@@ -53,11 +49,20 @@ function App() {
                 <MovieCard
                   key={item.id}
                   movie={item}
+                  onClick={setSelectedMovie}
                 />
               ))}
           </div>
         )}
       </main>
+
+      {/* DETAIL MODAL */}
+      {selectedMovie && (
+        <MovieDetailModal
+          movie={selectedMovie}
+          onClose={() => setSelectedMovie(null)}
+        />
+      )}
     </div>
   )
 }
@@ -69,7 +74,6 @@ const styles = {
     color: "#fff",
     overflowX: "hidden",
   },
-
   navbar: {
     position: "fixed",
     top: 0,
@@ -83,12 +87,10 @@ const styles = {
     padding: "0 30px",
     zIndex: 10,
   },
-
   left: {
     display: "flex",
     gap: "20px",
   },
-
   btn: {
     background: "none",
     border: "none",
@@ -96,19 +98,16 @@ const styles = {
     fontSize: "18px",
     cursor: "pointer",
   },
-
   search: {
     padding: "8px 12px",
     borderRadius: "8px",
     border: "none",
   },
-
   main: {
-    marginTop: "80px", // space for navbar
-  },
-
-  grid: {
+    marginTop: "80px",
     padding: "20px",
+  },
+  grid: {
     display: "grid",
     gridTemplateColumns: "repeat(auto-fill, minmax(180px, 1fr))",
     gap: "20px",
@@ -116,6 +115,7 @@ const styles = {
 }
 
 export default App
+
 
 
 
