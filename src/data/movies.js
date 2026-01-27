@@ -12,7 +12,7 @@ const movies = [
       id: 2,
       title: "Sinners",
       image: "https://image.tmdb.org/t/p/w1280/qTvFWCGeGXgBRaINLY1zqgTPSpn.jpg",
-      note: "bella pe te",
+      note: "Bel film, bella ambientazione, da vedere ma è assolutamente vietato leggere prima la trama.",
       watched: true,
       rating: 4.5,
     },
@@ -47,6 +47,14 @@ const movies = [
       note: "Finalmente diverso dai soliti Marvel, lungo il giusto, estetica retrò da sballo. Da vedere",
       watched: true,
       rating: 4.5,
+    },
+    {
+      id: 7,
+      title: "Dangerous Animals",
+      image: "https://image.tmdb.org/t/p/w1280/9tk3Si960hg4E49eMt81dS7Qe9Z.jpg",
+      note: "Mi aspettavo qualcosa di più ma alla fine è più un thriller che un horror. Giusto la sufficienza",
+      watched: true,
+      rating: 4,
     },
     
     // add 200+ safely here

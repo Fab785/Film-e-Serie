@@ -22,7 +22,7 @@ const styles = {
   },
   image: {
     width: "100%",
-    height: "270px",
+    aspectRatio: "2 / 3",
     objectFit: "cover",
     display: "block",
   },
