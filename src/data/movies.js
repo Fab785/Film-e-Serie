@@ -56,6 +56,22 @@ const movies = [
       watched: true,
       rating: 4,
     },
+    {
+      id: 7,
+      title: "No Exit",
+      image: "https://image.tmdb.org/t/p/w1280/5cnLoWq9o5tuLe1Zq4BTX4LwZ2B.jpg",
+      note: "Non un capolavoro però mi ha piacevolmente intrattenuto con qualche colpo di scena",
+      watched: true,
+      rating: 4,
+    },
+    {
+      id: 8,
+      title: "Jurassic World - La Rinascita",
+      image: "https://image.tmdb.org/t/p/w1280/1RICxzeoNCAO5NpcRMIgg1XT6fm.jpg",
+      note: "Come puoi immaginare abbasta scontato. Se non altro almeno la storia è diversa del solito, non c'è più il parco di mezzo",
+      watched: true,
+      rating: 4,
+    },
     
     // add 200+ safely here
   ]
