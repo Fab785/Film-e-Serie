@@ -12,7 +12,7 @@ const tvShows = [
       id: 2,
       title: "Welcome to Derry",
       image: "https://image.tmdb.org/t/p/w1280/nyy3BITeIjviv6PFIXtqvc8i6xi.jpg",
-      note: "Originale diavizione del solit IT che gli da nuova linfa. Promossa",
+      note: "Originale deviazione del solito IT che gli da nuova linfa. Promossa",
       rating: 5
     },
     {
