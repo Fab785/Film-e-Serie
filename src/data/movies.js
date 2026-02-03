@@ -155,6 +155,51 @@ const movies = [
       rating: 4,
       watchedBy: ["fabrizio"]
     },
+    {
+      id: 18,
+      title: "Barbarian",
+      image: "https://image.tmdb.org/t/p/w1280/idT5mnqPcJgSkvpDX7pJffBzdVH.jpg",
+      note: "Niente di troppo innovativo ma un 6 abbondante se lo prende",
+      watched: true,
+      rating: 4,
+      watchedBy: ["christian"]
+    },
+    {
+      id: 19,
+      title: "Longlegs",
+      image: "https://image.tmdb.org/t/p/w1280/1EwNyiiNFd863H4e8nWEzutnZD7.jpg",
+      note: "Originale, merita",
+      watched: true,
+      rating: 4,
+      watchedBy: ["christian"]
+    },
+    {
+      id: 20,
+      title: "Companion",
+      image: "https://image.tmdb.org/t/p/w1280/yBJAA1oAF7RB7qLycJtYo9FPsQ0.jpg",
+      note: "Tutto sommato buon film, merita una visione",
+      watched: true,
+      rating: 4,
+      watchedBy: ["christian"]
+    },
+    {
+      id: 21,
+      title: "Fidanzata in affitto",
+      image: "https://image.tmdb.org/t/p/w1280/gD72DhJ7NbfxvtxGiAzLaa0xaoj.jpg",
+      note: "Commedia molto piacevole, meno scontata di quanto uno potrebbe pensare a prima vista",
+      watched: true,
+      rating: 4,
+      watchedBy: ["christian"]
+    },
+    {
+      id: 22,
+      title: "Death of a Unicorn",
+      image: "https://image.tmdb.org/t/p/w1280/xWlF2i51zUq7BUq4iJte1g9NyIM.jpg",
+      note: "Non so quanto lo si possa prendere sul serio però è guardabile",
+      watched: true,
+      rating: 4,
+      watchedBy: ["fabrizio"]
+    },
     
     // add 200+ safely here
   ]
