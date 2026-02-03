@@ -7,6 +7,7 @@ const movies = [
       note: "Non male anche se John Wick mi ha aveva un pò stufato (il 4 infatti lo avevo saltato). Questo però alla fine mi è sembrato un oò meglio dei successivi dal 1 della saga principale ",
       watched: true,
       rating: 4.5,
+      watchedBy: ["christian"]
     },
     {
       id: 2,
@@ -15,6 +16,7 @@ const movies = [
       note: "Bel film, bella ambientazione, da vedere ma è assolutamente vietato leggere prima la trama.",
       watched: true,
       rating: 4.5,
+      watchedBy: ["christian"]
     },
     {
       id: 3,
@@ -23,6 +25,7 @@ const movies = [
       note: "Non si può non vedere in quanto capitolo finale della saga ma in fonda sai cosa aspettarti già prima di vederlo",
       watched: true,
       rating: 4.5,
+      watchedBy: ["christian"]
     },
     {
       id: 4,
@@ -31,6 +34,8 @@ const movies = [
       note: "Il film è meglio del libro anche se non è un capolavoro, forse un pochino troppo lungo e come giallo non mi ha tenuto sulle spine come speravo. Attori bravissimi",
       watched: true,
       rating: 4,
+      watchedBy: ["fabrizio"]
+    
     },
     {
       id: 5,
@@ -39,6 +44,7 @@ const movies = [
       note: "Quello che ci si aspetterebbe da un film del genere.Abbastanza scontato ed altrettanto inverosimile nella storia. Dal punto di vista visivo però fatto molto bene con cameo di veri piloti e dirigenti della Formula 1",
       watched: true,
       rating: 4.5,
+      watchedBy: ["christian"]
     },
     {
       id: 6,
@@ -47,6 +53,7 @@ const movies = [
       note: "Finalmente diverso dai soliti Marvel, lungo il giusto, estetica retrò da sballo. Da vedere",
       watched: true,
       rating: 4.5,
+      watchedBy: ["christian"]
     },
     {
       id: 7,
@@ -55,6 +62,7 @@ const movies = [
       note: "Mi aspettavo qualcosa di più ma alla fine è più un thriller che un horror. Giusto la sufficienza",
       watched: true,
       rating: 4,
+      watchedBy: ["fabrizio"]
     },
     {
       id: 8,
@@ -63,6 +71,7 @@ const movies = [
       note: "Non un capolavoro però mi ha piacevolmente intrattenuto con qualche colpo di scena",
       watched: true,
       rating: 4,
+      watchedBy: ["fabrizio"]
     },
     {
       id: 9,
@@ -71,6 +80,8 @@ const movies = [
       note: "Come puoi immaginare abbasta scontato. Se non altro almeno la storia è diversa del solito, non c'è più il parco di mezzo",
       watched: true,
       rating: 4,
+      watchedBy: ["christian"]
+
     },
     {
       id: 10,
@@ -79,6 +90,7 @@ const movies = [
       note: "Divertente soprattutto nella prima parte, seconda già più scontata",
       watched: true,
       rating: 4,
+      watchedBy: ["christian"]
     },
     {
       id: 11,
@@ -87,6 +99,7 @@ const movies = [
       note: "Insomma, parte bene, troppo filosofico nella seconda parte, diventa un horror che si prende troppo sul serio",
       watched: true,
       rating: 4,
+      watchedBy: ["christian"]
     },
     {
       id: 12,
@@ -95,6 +108,52 @@ const movies = [
       note: "Bel film d'azione e di fantapolitica. Merita",
       watched: true,
       rating: 4,
+      watchedBy: ["christian"]
+    },
+    {
+      id: 13,
+      title: "Il Ministero della Guerra Sporca",
+      image: "https://image.tmdb.org/t/p/w1280/8aF0iAKH9MJMYAZdi0Slg77RYa2.jpg",
+      note: "Divertente, molto gustoso",
+      watched: true,
+      rating: 4,
+      watchedBy: ["christian"]
+    },
+    {
+      id: 14,
+      title: "The Lost City",
+      image: "https://image.tmdb.org/t/p/w1280/rnheO8cFvCYcmZsDrBoabJbKLFE.jpg",
+      note: "Film d'azione ed avventura molto spassoso se divertirti un paio d'ore",
+      watched: true,
+      rating: 4,
+      watchedBy: ["christian"]
+    },
+    {
+      id: 15,
+      title: "Furiosa",
+      image: "https://image.tmdb.org/t/p/w1280/iADOJ8Zymht2JPMoy3R7xceZprc.jpg",
+      note: "Forse il più debole della serie Mad Max ma il 6 pieno se lo prende, sempre se ti piace il genere",
+      watched: true,
+      rating: 4,
+      watchedBy: ["christian"]
+    },
+    {
+      id: 16,
+      title: "Spider-Man: Into the Spider-Verse ",
+      image: "https://image.tmdb.org/t/p/w1280/iiZZdoQBEYBv6id8su7ImL0oCbD.jpg",
+      note: "Non un semplice cartone animato per ragazzini, divertente e pieno di azione",
+      watched: true,
+      rating: 4,
+      watchedBy: ["fabrizio"]
+    },
+    {
+      id: 17,
+      title: "Spider-Man: Across the Spider-Verse",
+      image: "https://image.tmdb.org/t/p/w1280/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg",
+      note: "Seconda parte, molto bello anche questo però mi è piaciuto un pochino meno",
+      watched: true,
+      rating: 4,
+      watchedBy: ["fabrizio"]
     },
     
     // add 200+ safely here
