@@ -7,7 +7,7 @@ const tvShows = [
       note: "Serie crime che non si prende molto sul serio, si indaga su alcuni omicidi tra una battuta comica e l'atra",
       watched: true,
       rating: 5,
-      watchedBy: ["fabrizio"]
+      watchedBy: ["fabrizio", "christian"]
     },
     {
       id: 2,

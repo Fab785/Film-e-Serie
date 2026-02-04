@@ -200,6 +200,70 @@ const movies = [
       rating: 4,
       watchedBy: ["fabrizio"]
     },
+    {
+      id: 23,
+      title: "Natale a 8 bit",
+      image: "https://image.tmdb.org/t/p/w1280/5YwaISdOwp8Zu6O7kwBeUn8a7Pu.jpg",
+      note: "Carinissimo film natalizio",
+      watched: true,
+      rating: 4,
+      watchedBy: ["christian"]
+    },
+    {
+      id: 24,
+      title: "Dear Santa",
+      image: "https://image.tmdb.org/t/p/w1280/fRbDHbGBXg6kwQYr3CRYeKPJW5q.jpg",
+      note: "Carino film natalizia fuori dai soliti schemi, con un grande Satan Jack Black",
+      watched: true,
+      rating: 4,
+      watchedBy: ["fabrizio"]
+    },
+    {
+      id: 25,
+      title: "Scappa - Get Out",
+      image: "https://image.tmdb.org/t/p/w1280/tFXcEccSQMf3lfhfXKSU9iRBpa3.jpg",
+      note: "Spet-Ta-Co-Lo, girato da paura ed originale quanto basta. Da non perdere",
+      watched: true,
+      rating: 4,
+      watchedBy: ["fabrizio", "christian"]
+    },
+    {
+      id: 26,
+      title: "Alta Tensione",
+      image: "https://image.tmdb.org/t/p/w1280/vKeFa7CqSxmWsQDjHP6SJXKoDbj.jpg",
+      note: "Boh, colpo finale che a mio avviso non regge. Promosso fino al twist finale, poi rivedibile. Ricordo solo molta molta violenz xD",
+      watched: true,
+      rating: 4,
+      watchedBy: ["fabrizio", "christian"]
+    },
+    {
+      id: 27,
+      title: "Yesterday",
+      image: "https://image.tmdb.org/t/p/w1280/9fYka5CQt9nrb6LOtKicysUf9NA.jpg",
+      note: "Commedia divertente soprattutto se ti piace la musica dei Beatles(e se sai chi sono)",
+      watched: true,
+      rating: 4,
+      watchedBy: ["fabrizio"]
+    },
+    {
+      id: 28,
+      title: "Bring her back",
+      image: "https://image.tmdb.org/t/p/w1280/tObSf1VzzHt9xB0csanFtb3DRjf.jpg",
+      note: "Horror diverso dai soliti ed è pure un buon film però che dire, l'ho trovato piuttosto sgradevole",
+      watched: true,
+      rating: 4,
+      watchedBy: ["christian"]
+    },
+    {
+      id: 29,
+      title: "La Llorona",
+      image: "https://image.tmdb.org/t/p/w1280/jhZlXSnFUpNiLAek9EkPrtLEWQI.jpg",
+      note: "Classico filmetto horror, racconta giusto la storia della Llorona ma niente di originale",
+      watched: true,
+      rating: 4,
+      watchedBy: ["fabrizio"]
+    },
+
     
     // add 200+ safely here
   ]
