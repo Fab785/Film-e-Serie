@@ -248,7 +248,7 @@ const movies = [
     {
       id: 28,
       title: "Bring her back",
-      image: "https://image.tmdb.org/t/p/w1280/tObSf1VzzHt9xB0csanFtb3DRjf.jpg",
+      image: "https://image.tmdb.org/t/p/w1280/zgRBas7mfiodY9voUOYY26poAc1.jpg",
       note: "Horror diverso dai soliti ed è pure un buon film però che dire, l'ho trovato piuttosto sgradevole",
       watched: true,
       rating: 4,
