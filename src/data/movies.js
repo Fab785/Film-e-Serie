@@ -263,6 +263,33 @@ const movies = [
       rating: 4,
       watchedBy: ["fabrizio"]
     },
+    {
+      id: 30,
+      title: "Borderlands",
+      image: "https://image.tmdb.org/t/p/w1280/4JGoZu1ZKFpMJTWAP35PCfkMgu8.jpg",
+      note: "Ne hanno parlato non granchè bene ma come film a sè stante mi ha strappato tante risate.In più non dura tanto",
+      watched: true,
+      rating: 4,
+      watchedBy: ["christian"]
+    },
+    {
+      id: 31,
+      title: "Mickey 17",
+      image: "https://image.tmdb.org/t/p/w1280/edKpE9B5qN3e559OuMCLZdW1iBZ.jpg",
+      note: "Provato a vedere per quanto ne avevano parlato bene. Tolto dopo un'ora per noia. Pensavo fosse serio invece l'ho trovato troppo grottesco per i miei gusti",
+      watched: true,
+      rating: 4,
+      watchedBy: ["christian"]
+    },
+    {
+      id: 32,
+      title: "The Substance",
+      image: "https://image.tmdb.org/t/p/w1280/evdF1vmLzuzH8EFblqAXBXWRGSi.jpg",
+      note: "Bello fino a 3/4, poi pure questo vira troppp sul grottesco esagerando a mio avviso",
+      watched: true,
+      rating: 4,
+      watchedBy: ["christian"]
+    },
 
     
     // add 200+ safely here
