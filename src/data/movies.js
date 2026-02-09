@@ -180,7 +180,7 @@ const movies = [
       note: "Tutto sommato buon film, merita una visione",
       watched: true,
       rating: 4,
-      watchedBy: ["christian"]
+      watchedBy: ["christian", "fabrizio"]
     },
     {
       id: 21,
