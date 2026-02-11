@@ -8,6 +8,7 @@ import tvShows from "./data/tvShows"
 function App() {
   const [page, setPage] = useState("home")
   const [search, setSearch] = useState("")
+  const [sortOrder, setSortOrder] = useState("az") // 👈 NEW
   const [selectedMovie, setSelectedMovie] = useState(null)
 
   const data =
@@ -26,12 +27,24 @@ function App() {
         </div>
 
         {page !== "home" && (
-          <input
-            placeholder="Search..."
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-            style={styles.search}
-          />
+          <div style={styles.right}>
+            <input
+              placeholder="Search..."
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              style={styles.search}
+            />
+
+            {/* SORT */}
+            <select
+              value={sortOrder}
+              onChange={(e) => setSortOrder(e.target.value)}
+              style={styles.sort}
+            >
+              <option value="az">A → Z</option>
+              <option value="za">Z → A</option>
+            </select>
+          </div>
         )}
       </nav>
 
@@ -44,6 +57,11 @@ function App() {
             {data
               .filter((item) =>
                 item.title.toLowerCase().includes(search.toLowerCase())
+              )
+              .sort((a, b) =>
+                sortOrder === "az"
+                  ? a.title.localeCompare(b.title)
+                  : b.title.localeCompare(a.title)
               )
               .map((item) => (
                 <MovieCard
@@ -91,6 +109,11 @@ const styles = {
     display: "flex",
     gap: "20px",
   },
+  right: {
+    display: "flex",
+    gap: "10px",
+    alignItems: "center",
+  },
   btn: {
     background: "none",
     border: "none",
@@ -102,6 +125,14 @@ const styles = {
     padding: "8px 12px",
     borderRadius: "8px",
     border: "none",
+  },
+  sort: {
+    padding: "8px",
+    borderRadius: "8px",
+    border: "none",
+    background: "#111",
+    color: "#fff",
+    cursor: "pointer",
   },
   main: {
     marginTop: "80px",
@@ -115,6 +146,7 @@ const styles = {
 }
 
 export default App
+
 
 
 

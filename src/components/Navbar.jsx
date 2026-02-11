@@ -4,6 +4,7 @@ import Modal from "./Modal"
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [modalType, setModalType] = useState(null)
+  const [sortOrder, setSortOrder] = useState("az")
 
   const openModal = (type) => {
     setModalType(type)
@@ -24,6 +25,16 @@ function Navbar() {
           <button style={styles.link} onClick={() => openModal("tv")}>
             TV Shows
           </button>
+
+          {/* SORT SELECT */}
+          <select
+            value={sortOrder}
+            onChange={(e) => setSortOrder(e.target.value)}
+            style={styles.sort}
+          >
+            <option value="az">A → Z</option>
+            <option value="za">Z → A</option>
+          </select>
         </div>
 
         {/* Mobile burger */}
@@ -44,6 +55,16 @@ function Navbar() {
           <button style={styles.mobileLink} onClick={() => openModal("tv")}>
             TV Shows
           </button>
+
+          {/* SORT (mobile) */}
+          <select
+            value={sortOrder}
+            onChange={(e) => setSortOrder(e.target.value)}
+            style={styles.mobileSort}
+          >
+            <option value="az">A → Z</option>
+            <option value="za">Z → A</option>
+          </select>
         </div>
       )}
 
@@ -51,6 +72,7 @@ function Navbar() {
       {modalType && (
         <Modal
           type={modalType}
+          sortOrder={sortOrder}
           onClose={() => setModalType(null)}
         />
       )}
@@ -78,7 +100,8 @@ const styles = {
   },
   desktopMenu: {
     display: "flex",
-    gap: "30px",
+    alignItems: "center",
+    gap: "24px",
   },
   link: {
     background: "none",
@@ -86,6 +109,13 @@ const styles = {
     color: "#fff",
     fontSize: "18px",
     cursor: "pointer",
+  },
+  sort: {
+    padding: "6px 10px",
+    borderRadius: "8px",
+    border: "none",
+    cursor: "pointer",
+    fontSize: "14px",
   },
   burger: {
     background: "none",
@@ -114,6 +144,12 @@ const styles = {
     fontSize: "18px",
     textAlign: "left",
     cursor: "pointer",
+  },
+  mobileSort: {
+    padding: "10px",
+    borderRadius: "8px",
+    border: "none",
+    fontSize: "16px",
   },
 }
 
