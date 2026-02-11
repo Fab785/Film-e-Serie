@@ -290,6 +290,15 @@ const movies = [
       rating: 4,
       watchedBy: ["christian"]
     },
+    {
+      id: 33,
+      title: "Black Bag",
+      image: "https://image.tmdb.org/t/p/w1280/hHPovtU4b96LHcoeEwRkGHI5btw.jpg",
+      note: "Buon film di spionaggio. Non tanta azione ma si salva",
+      watched: true,
+      rating: 4,
+      watchedBy: ["christian"]
+    },
 
     
     // add 200+ safely here
