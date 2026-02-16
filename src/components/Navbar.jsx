@@ -1,32 +1,52 @@
 import { useState } from "react"
-import Modal from "./Modal"
 
-function Navbar() {
+function Navbar({
+  search,
+  setSearch,
+  sortOrder,
+  setSortOrder,
+  setPage,
+}) {
   const [menuOpen, setMenuOpen] = useState(false)
-  const [modalType, setModalType] = useState(null)
-  const [sortOrder, setSortOrder] = useState("az")
-
-  const openModal = (type) => {
-    setModalType(type)
-    setMenuOpen(false)
-  }
 
   return (
     <>
-      {/* Navbar */}
+      {/* NAVBAR */}
       <nav style={styles.nav}>
-        <h2 style={styles.logo}>🎬 MovieNight</h2>
 
-        {/* Desktop menu */}
-        <div style={styles.desktopMenu}>
-          <button style={styles.link} onClick={() => openModal("movies")}>
-            Movies
-          </button>
-          <button style={styles.link} onClick={() => openModal("tv")}>
-            TV Shows
-          </button>
+        {/* LEFT */}
+        <div style={styles.left}>
+          <h2 style={styles.logo}>🎬 MovieNight</h2>
 
-          {/* SORT SELECT */}
+          {/* Desktop buttons */}
+          <div style={styles.desktopOnly}>
+            <button
+              style={styles.link}
+              onClick={() => setPage("movies")}
+            >
+              Movies
+            </button>
+
+            <button
+              style={styles.link}
+              onClick={() => setPage("tv")}
+            >
+              TV Shows
+            </button>
+          </div>
+        </div>
+
+
+        {/* RIGHT DESKTOP */}
+        <div style={styles.rightDesktop}>
+
+          <input
+            placeholder="Search..."
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            style={styles.search}
+          />
+
           <select
             value={sortOrder}
             onChange={(e) => setSortOrder(e.target.value)}
@@ -35,28 +55,57 @@ function Navbar() {
             <option value="az">A → Z</option>
             <option value="za">Z → A</option>
           </select>
+
         </div>
 
-        {/* Mobile burger */}
+
+        {/* BURGER */}
         <button
           style={styles.burger}
           onClick={() => setMenuOpen(!menuOpen)}
         >
           ☰
         </button>
+
       </nav>
 
-      {/* Mobile dropdown */}
+
+      {/* MOBILE MENU */}
       {menuOpen && (
+
         <div style={styles.mobileMenu}>
-          <button style={styles.mobileLink} onClick={() => openModal("movies")}>
+
+          <button
+            style={styles.mobileLink}
+            onClick={() => {
+              setPage("movies")
+              setMenuOpen(false)
+            }}
+          >
             Movies
           </button>
-          <button style={styles.mobileLink} onClick={() => openModal("tv")}>
+
+          <button
+            style={styles.mobileLink}
+            onClick={() => {
+              setPage("tv")
+              setMenuOpen(false)
+            }}
+          >
             TV Shows
           </button>
 
-          {/* SORT (mobile) */}
+
+          {/* SEARCH MOBILE */}
+          <input
+            placeholder="Search..."
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            style={styles.mobileSearch}
+          />
+
+
+          {/* SORT MOBILE */}
           <select
             value={sortOrder}
             onChange={(e) => setSortOrder(e.target.value)}
@@ -65,93 +114,119 @@ function Navbar() {
             <option value="az">A → Z</option>
             <option value="za">Z → A</option>
           </select>
+
         </div>
+
       )}
 
-      {/* Modal */}
-      {modalType && (
-        <Modal
-          type={modalType}
-          sortOrder={sortOrder}
-          onClose={() => setModalType(null)}
-        />
-      )}
     </>
   )
 }
 
+export default Navbar
+
+
 const styles = {
+
   nav: {
     position: "fixed",
     top: 0,
-    left: 0,
     width: "100%",
-    height: "80px",
+    height: "70px",
     background: "#000",
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
-    padding: "0 24px",
-    zIndex: 100,
+    padding: "0 15px",
+    zIndex: 1000,
   },
-  logo: {
-    color: "#fff",
-    fontSize: "22px",
-  },
-  desktopMenu: {
+
+
+  left: {
     display: "flex",
     alignItems: "center",
-    gap: "24px",
+    gap: "20px",
   },
+
+
+  logo: {
+    color: "#fff",
+    fontSize: "20px",
+  },
+
+
   link: {
     background: "none",
     border: "none",
     color: "#fff",
-    fontSize: "18px",
+    fontSize: "16px",
     cursor: "pointer",
   },
+
+
+  rightDesktop: {
+    display: "flex",
+    alignItems: "center",
+    gap: "10px",
+  },
+
+
+  search: {
+    padding: "6px",
+  },
+
+
   sort: {
-    padding: "6px 10px",
-    borderRadius: "8px",
-    border: "none",
-    cursor: "pointer",
-    fontSize: "14px",
+    padding: "6px",
   },
+
+
   burger: {
     background: "none",
     border: "none",
     color: "#fff",
-    fontSize: "28px",
+    fontSize: "26px",
     cursor: "pointer",
-    display: "none",
   },
+
+
   mobileMenu: {
     position: "fixed",
-    top: "80px",
-    left: 0,
+    top: "70px",
     width: "100%",
     background: "#111",
     display: "flex",
     flexDirection: "column",
-    gap: "20px",
+    gap: "15px",
     padding: "20px",
-    zIndex: 99,
   },
+
+
   mobileLink: {
     background: "none",
     border: "none",
     color: "#fff",
     fontSize: "18px",
     textAlign: "left",
-    cursor: "pointer",
   },
-  mobileSort: {
+
+
+  mobileSearch: {
     padding: "10px",
-    borderRadius: "8px",
-    border: "none",
     fontSize: "16px",
   },
-}
 
-export default Navbar
+
+  mobileSort: {
+    padding: "10px",
+    fontSize: "16px",
+  },
+
+
+  desktopOnly: {
+    display: "flex",
+    gap: "15px",
+  },
+
+}
 
