@@ -299,6 +299,33 @@ const movies = [
       rating: 4,
       watchedBy: ["christian"]
     },
+    {
+      id: 34,
+      title: "The Alto Knight",
+      image: "https://image.tmdb.org/t/p/w1280/12KDcPkKXshEuXu43rJQEux5W2d.jpg",
+      note: "Buon film di Gangster con De Niro che fa 2 personaggi diversi. Non un capolavoro ma si lascia vedere",
+      watched: true,
+      rating: 4,
+      watchedBy: ["christian"]
+    },
+    {
+      id: 35,
+      title: "Malignant",
+      image: "https://image.tmdb.org/t/p/w1280/6Fbn1kUd2x3sHCLzTg2olVFA0eS.jpg",
+      note: "Ottimo film horror. Te lo consiglio",
+      watched: true,
+      rating: 4,
+      watchedBy: ["christian"]
+    },
+    {
+      id: 36,
+      title: "Misteri dal profondo - The Gorge",
+      image: "https://image.tmdb.org/t/p/w1280/7iMBZzVZtG0oBug4TfqDb9ZxAOa.jpg",
+      note: "Parte bene, ti fa chiedere chissà che cosa succede dopo e poi va in vacca nella seconda parte",
+      watched: true,
+      rating: 4,
+      watchedBy: ["christian"]
+    },
 
     
     // add 200+ safely here
