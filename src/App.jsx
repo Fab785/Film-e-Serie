@@ -68,6 +68,14 @@ function App() {
                 Z → A
               </option>
 
+              <option value="new">
+                Newest → Oldest
+              </option>
+
+              <option value="old">
+                Oldest → Newest
+              </option>
+
             </select>
 
           </div>
@@ -92,11 +100,23 @@ function App() {
                 item.title.toLowerCase().includes(search.toLowerCase())
               )
 
-              .sort((a, b) =>
-                sortOrder === "az"
-                  ? a.title.localeCompare(b.title)
-                  : b.title.localeCompare(a.title)
-              )
+              .sort((a, b) => {
+
+                if (sortOrder === "az")
+                  return a.title.localeCompare(b.title)
+
+                if (sortOrder === "za")
+                  return b.title.localeCompare(a.title)
+
+                if (sortOrder === "new")
+                  return b.id - a.id
+
+                if (sortOrder === "old")
+                  return a.id - b.id
+
+                return 0
+
+              })
 
               .map((item) => (
 
@@ -261,6 +281,7 @@ const styles = {
 
 
 export default App
+
 
 
 
