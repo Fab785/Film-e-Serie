@@ -347,7 +347,7 @@ const movies = [
     {
       id: 39,
       title: "September 5",
-      image: "https://image.tmdb.org/t/p/w1280/7iMBZzVZtG0oBug4TfqDb9ZxAOa.jpg",
+      image: "https://image.tmdb.org/t/p/w1280/3kcQOLwYKGPwyjiynFsvP8vHvRn.jpg",
       note: "Molto bello, tratto da una storia vera",
       watched: true,
       rating: 4,
