@@ -326,6 +326,33 @@ const movies = [
       rating: 4,
       watchedBy: ["christian"]
     },
+    {
+      id: 37,
+      title: "The Holdovers",
+      image: "https://image.tmdb.org/t/p/w1280/VHSzNBTwxV8vh7wylo7O9CLdac.jpg",
+      note: "Ottimo, vermanete bello, sempre natalizio",
+      watched: true,
+      rating: 4,
+      watchedBy: ["christian"]
+    },
+    {
+      id: 38,
+      title: "I tre moschettieri - D'Artagnan",
+      image: "https://image.tmdb.org/t/p/w1280/hfExJPcbBtDeFDEb7I1By72Drlr.jpg",
+      note: "Niente male, a differenza del seguito che non mi ha convinto per nulla",
+      watched: true,
+      rating: 4,
+      watchedBy: ["christian"]
+    },
+    {
+      id: 39,
+      title: "September 5",
+      image: "https://image.tmdb.org/t/p/w1280/7iMBZzVZtG0oBug4TfqDb9ZxAOa.jpg",
+      note: "Molto bello, tratto da una storia vera",
+      watched: true,
+      rating: 4,
+      watchedBy: ["christian"]
+    },
 
     
     // add 200+ safely here
