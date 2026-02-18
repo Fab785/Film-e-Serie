@@ -362,6 +362,15 @@ const movies = [
       rating: 4,
       watchedBy: ["christian"]
     },
+    {
+      id: 41,
+      title: "Il Gladiatore 2",
+      image: "https://image.tmdb.org/t/p/w1280/5qGIxdEO841C0tdY8vOdLoRVrr0.jpg",
+      note: "Insomma :(",
+      watched: true,
+      rating: 4,
+      watchedBy: ["christian"]
+    },
 
     
     // add 200+ safely here
