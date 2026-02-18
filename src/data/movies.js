@@ -353,6 +353,15 @@ const movies = [
       rating: 4,
       watchedBy: ["christian"]
     },
+    {
+      id: 40,
+      title: "Nosferatu",
+      image: "https://image.tmdb.org/t/p/w1280/5qGIxdEO841C0tdY8vOdLoRVrr0.jpg",
+      note: "Buon film, diverso dai soliti sui vampiri",
+      watched: true,
+      rating: 4,
+      watchedBy: ["christian"]
+    },
 
     
     // add 200+ safely here
