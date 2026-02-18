@@ -371,6 +371,15 @@ const movies = [
       rating: 4,
       watchedBy: ["christian"]
     },
+    {
+      id: 42,
+      title: "Beetlejuice Beetlejuice",
+      image: "https://image.tmdb.org/t/p/w1280/2cxhvwyEwRlysAmRH4iodkvo0z5.jpg",
+      note: "Buon seguito, rispetta lo spirito dell'originale alla fine.",
+      watched: true,
+      rating: 4,
+      watchedBy: ["christian"]
+    },
 
     
     // add 200+ safely here
