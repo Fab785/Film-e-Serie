@@ -365,7 +365,7 @@ const movies = [
     {
       id: 41,
       title: "Il Gladiatore 2",
-      image: "https://image.tmdb.org/t/p/w1280/5qGIxdEO841C0tdY8vOdLoRVrr0.jpg",
+      image: "https://image.tmdb.org/t/p/w1280/2cxhvwyEwRlysAmRH4iodkvo0z5.jpg",
       note: "Insomma :(",
       watched: true,
       rating: 4,
