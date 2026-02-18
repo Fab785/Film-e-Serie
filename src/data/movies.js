@@ -374,8 +374,17 @@ const movies = [
     {
       id: 42,
       title: "Beetlejuice Beetlejuice",
-      image: "https://image.tmdb.org/t/p/w1280/2cxhvwyEwRlysAmRH4iodkvo0z5.jpg",
+      image: "https://image.tmdb.org/t/p/w1280/kKgQzkUCnQmeTPkyIwHly2t6ZFI.jpg",
       note: "Buon seguito, rispetta lo spirito dell'originale alla fine.",
+      watched: true,
+      rating: 4,
+      watchedBy: ["christian"]
+    },
+    {
+      id: 43,
+      title: "Auguri per la tua morte",
+      image: "https://image.tmdb.org/t/p/w1280/cTaEIUYTt52ooq9quVbAQ7NpGwo.jpg",
+      note: "Commedia horror abbastanza originale",
       watched: true,
       rating: 4,
       watchedBy: ["christian"]
