@@ -252,7 +252,7 @@ const movies = [
       note: "Horror diverso dai soliti ed è pure un buon film però che dire, l'ho trovato piuttosto sgradevole",
       watched: true,
       rating: 4,
-      watchedBy: ["christian"]
+      watchedBy: ["christian", "fabrizio"]
     },
     {
       id: 29,
@@ -270,7 +270,7 @@ const movies = [
       note: "Ne hanno parlato non granchè bene ma come film a sè stante mi ha strappato tante risate.In più non dura tanto",
       watched: true,
       rating: 4,
-      watchedBy: ["christian"]
+      watchedBy: ["christian", "fabrizio"]
     },
     {
       id: 31,
