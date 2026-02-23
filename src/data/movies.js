@@ -392,11 +392,11 @@ const movies = [
     {
       id: 44,
       title: "E poi si vede",
-      image: "https://image.tmdb.org/t/p/w1280/cTaEIUYTt52ooq9quVbAQ7NpGwo.jpg",
+      image: "https://image.tmdb.org/t/p/w1280/wqAP7bUd5M60dJxQ7hkxMRuvGlq.jpg",
       note: "Non fa morire dal ridere  ma merita",
       watched: true,
       rating: 4,
-      watchedBy: ["christian"]
+      watchedBy: ["fabrizio"]
     },
 
     
