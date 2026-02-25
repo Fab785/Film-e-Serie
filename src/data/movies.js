@@ -398,6 +398,15 @@ const movies = [
       rating: 4,
       watchedBy: ["fabrizio"]
     },
+    {
+      id: 44,
+      title: "So cosa hai fatto",
+      image: "https://image.tmdb.org/t/p/w1280/wqAP7bUd5M60dJxQ7hkxMRuvGlq.jpg",
+      note: "Non fa morire dal ridere  ma merita",
+      watched: true,
+      rating: 4,
+      watchedBy: ["christian"]
+    },
 
     
     // add 200+ safely here
