@@ -423,7 +423,7 @@ const movies = [
       note: "Scorrevole e spinge ad arrivare alla fine per sapere come finisce... e finisce un pò così, senza spiegare nulla",
       watched: true,
       rating: 3,
-      watchedBy: ["christian", "fabrizio"]
+      watchedBy: ["christian"]
     },
 
     
