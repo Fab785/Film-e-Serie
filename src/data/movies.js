@@ -407,6 +407,24 @@ const movies = [
       rating: 3,
       watchedBy: ["christian"]
     },
+    {
+      id: 46,
+      title: "Weapons",
+      image: "https://image.tmdb.org/t/p/w1280/A8COkw9waXJxaBKGUKWE3pD3OLx.jpg",
+      note: "Bel film, aspettiamo lo spin-off della zia matta",
+      watched: true,
+      rating: 3,
+      watchedBy: ["christian", "fabrizio"]
+    },
+    {
+      id: 47,
+      title: "The Watcher",
+      image: "https://image.tmdb.org/t/p/w1280/6RrseODZo2e66XOzC1XMzMuecnf.jpg",
+      note: "Scorrevole e spinge ad arrivare alla fine per sapere come finisce... e finisce un pò così, senza spiegare nulla",
+      watched: true,
+      rating: 3,
+      watchedBy: ["christian", "fabrizio"]
+    },
 
     
     // add 200+ safely here
