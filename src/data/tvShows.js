@@ -28,7 +28,7 @@ const tvShows = [
     {
       id: 4,
       title: "Monarch: Legacy of Monsters",
-      image: "https://image.tmdb.org/t/p/w1280/jBn4LWlgdsf6xIUYhYBwpctBVsj.jpg",
+      image: "https://image.tmdb.org/t/p/w1280/TCnfNaLOfrXWc9dboKFXVQ8nGn.jpg",
       note: "Una bella serie sul mondo di Godzilla, ben fatta",
       rating: 5,
       watchedBy: ["fabrizio"]
