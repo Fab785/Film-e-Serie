@@ -428,7 +428,7 @@ const movies = [
     {
       id: 48,
       title: "The Family Plan 2",
-      image: "https://image.tmdb.org/t/p/w1280/6RrseODZo2e66XOzC1XMzMuecnf.jpg",
+      image: "https://image.tmdb.org/t/p/w1280/semFxuYx6HcrkZzslgAkBqfJvZk.jpg",
       note: "Apple ci riprova con il secondo capitolo. Film d'azione per tutta la famiglia, niente di speciale e niente di super originale",
       watched: true,
       rating: 3,
