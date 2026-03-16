@@ -46,7 +46,7 @@ const tvShows = [
       id: 6,
       title: "L'Istituto",
       image: "https://image.tmdb.org/t/p/w1280/7JXZdWifaa6wL0XLRi0GJOlOA8y.jpg",
-      note: "",
+      note: "Buona serie ma non imperdibile",
       watched: true,
       rating: 3,
       watchedBy: ["christian"]
