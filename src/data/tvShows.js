@@ -51,6 +51,15 @@ const tvShows = [
       rating: 3,
       watchedBy: ["christian"]
     },
+    {
+      id: 7,
+      title: "Billy the kid",
+      image: "https://image.tmdb.org/t/p/w1280/7JXZdWifaa6wL0XLRi0GJOlOA8y.jpg",
+      note: "Buona serie ma non imperdibile",
+      watched: true,
+      rating: 3,
+      watchedBy: ["christian"]
+    },
   ]
   
   export default tvShows
