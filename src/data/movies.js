@@ -416,17 +416,8 @@ const movies = [
       rating: 3,
       watchedBy: ["christian", "fabrizio"]
     },
-    {
+   {
       id: 47,
-      title: "The Watcher",
-      image: "https://image.tmdb.org/t/p/w1280/6RrseODZo2e66XOzC1XMzMuecnf.jpg",
-      note: "Scorrevole e spinge ad arrivare alla fine per sapere come finisce... e finisce un pò così, senza spiegare nulla",
-      watched: true,
-      rating: 3,
-      watchedBy: ["christian"]
-    },
-    {
-      id: 48,
       title: "The Family Plan 2",
       image: "https://image.tmdb.org/t/p/w1280/semFxuYx6HcrkZzslgAkBqfJvZk.jpg",
       note: "Apple ci riprova con il secondo capitolo. Film d'azione per tutta la famiglia, niente di speciale e niente di originale",

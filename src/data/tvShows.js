@@ -33,6 +33,15 @@ const tvShows = [
       rating: 5,
       watchedBy: ["fabrizio"]
     },
+    {
+      id: 5,
+      title: "The Watcher",
+      image: "https://image.tmdb.org/t/p/w1280/6RrseODZo2e66XOzC1XMzMuecnf.jpg",
+      note: "Scorrevole e spinge ad arrivare alla fine per sapere come finisce... e finisce un pò così, senza spiegare nulla",
+      watched: true,
+      rating: 3,
+      watchedBy: ["christian"]
+    },
   ]
   
   export default tvShows
