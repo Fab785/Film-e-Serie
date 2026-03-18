@@ -73,7 +73,7 @@ const tvShows = [
       id: 9,
       title: "Task",
       image: "https://image.tmdb.org/t/p/w1280/1VNiAPyZPJIHexdiblliHmoLzgL.jpg",
-      note: "Bella serie anche se inferiore all'altra degli stessi autori(Omicidio a Easttown)",
+      note: "https://image.tmdb.org/t/p/w1280/9JdL1aQdAQiyYYQ2xCqbHaEcZt8.jpg",
       watched: true,
       rating: 4,
       watchedBy: ["christian"]
