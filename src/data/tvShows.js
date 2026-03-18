@@ -63,7 +63,7 @@ const tvShows = [
     {
       id: 8,
       title: "Leopard Skin",
-      image: "https://image.tmdb.org/t/p/w1280/7JXZdWifaa6wL0XLRi0GJOlOA8y.jpg",
+      image: "https://image.tmdb.org/t/p/w1280/1VNiAPyZPJIHexdiblliHmoLzgL.jpg",
       note: "Parte alla grande con scene incastrate bene ma il finale non mi ha convinto ed alla fine non mantiene le promesse. Per come inizia avrei sperato in qualcosa di meglio",
       watched: true,
       rating: 4,
