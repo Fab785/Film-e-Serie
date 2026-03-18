@@ -54,7 +54,7 @@ const tvShows = [
     {
       id: 7,
       title: "Billy the kid",
-      image: "https://image.tmdb.org/t/p/w1280/7JXZdWifaa6wL0XLRi0GJOlOA8y.jpg",
+      image: "https://image.tmdb.org/t/p/w1280/rjhCeBM6pwcXJiLDHi40LTJGltq.jpg",
       note: "Sufficienza piena ma niente di più",
       watched: true,
       rating: 4,
