@@ -60,6 +60,15 @@ const tvShows = [
       rating: 4,
       watchedBy: ["christian"]
     },
+    {
+      id: 8,
+      title: "Leopard Skin",
+      image: "https://image.tmdb.org/t/p/w1280/7JXZdWifaa6wL0XLRi0GJOlOA8y.jpg",
+      note: "Sufficienza piena ma niente di più",
+      watched: true,
+      rating: 4,
+      watchedBy: ["christian"]
+    },
   ]
   
   export default tvShows
