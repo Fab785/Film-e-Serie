@@ -73,7 +73,7 @@ const tvShows = [
       id: 9,
       title: "Task",
       image: "https://image.tmdb.org/t/p/w1280/1VNiAPyZPJIHexdiblliHmoLzgL.jpg",
-      note: "Parte alla grande con scene incastrate bene ma il finale non mi ha convinto ed alla fine non mantiene le promesse. Per come inizia avrei sperato in qualcosa di meglio",
+      note: "Bella serie anche se inferiore all'altra degli stessi autori(Omicidio a Easttown)",
       watched: true,
       rating: 4,
       watchedBy: ["christian"]
