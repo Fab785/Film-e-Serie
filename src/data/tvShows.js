@@ -72,7 +72,7 @@ const tvShows = [
     {
       id: 9,
       title: "Task",
-      image: "hhttps://image.tmdb.org/t/p/w1280/9JdL1aQdAQiyYYQ2xCqbHaEcZt8.jpg",
+      image: "https://image.tmdb.org/t/p/w1280/7q2LgpzbygaGP4aWl1FKCEayMdY.jpg",
       note: "Bella serie anche se inferiore all'altra degli stessi autori (Omicidio a Easttown)",
       watched: true,
       rating: 4,
@@ -81,8 +81,8 @@ const tvShows = [
     {
       id: 10,
       title: "Hotel Cocaine",
-      image: "https://image.tmdb.org/t/p/w1280/1VNiAPyZPJIHexdiblliHmoLzgL.jpg",
-      note: "https://image.tmdb.org/t/p/w1280/9JdL1aQdAQiyYYQ2xCqbHaEcZt8.jpg",
+      image: "https://image.tmdb.org/t/p/w1280/mHo53ZpCwxpEFEwhAjw7cbZzQfC.jpg",
+      note: "",
       watched: true,
       rating: 4,
       watchedBy: ["christian"]
