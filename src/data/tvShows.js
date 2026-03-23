@@ -82,7 +82,7 @@ const tvShows = [
       id: 10,
       title: "Hotel Cocaine",
       image: "https://image.tmdb.org/t/p/w1280/mHo53ZpCwxpEFEwhAjw7cbZzQfC.jpg",
-      note: "",
+      note: "Serie non imperdibile ma godibile per persone a cui piacciono quelle sui narcos",
       watched: true,
       rating: 4,
       watchedBy: ["christian"]
