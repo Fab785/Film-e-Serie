@@ -78,6 +78,15 @@ const tvShows = [
       rating: 4,
       watchedBy: ["christian"]
     },
+    {
+      id: 10,
+      title: "Task",
+      image: "https://image.tmdb.org/t/p/w1280/1VNiAPyZPJIHexdiblliHmoLzgL.jpg",
+      note: "https://image.tmdb.org/t/p/w1280/9JdL1aQdAQiyYYQ2xCqbHaEcZt8.jpg",
+      watched: true,
+      rating: 4,
+      watchedBy: ["christian"]
+    },
   ]
   
   export default tvShows
