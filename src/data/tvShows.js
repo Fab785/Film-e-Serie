@@ -90,7 +90,7 @@ const tvShows = [
     {
       id: 11,
       title: "Omicidio a Easttown",
-      image: "https://image.tmdb.org/t/p/w1280/mHo53ZpCwxpEFEwhAjw7cbZzQfC.jpg",
+      image: "https://www.themoviedb.org/tv/115004-mare-of-easttown",
       note: "N/A",
       watched: true,
       rating: 4,
