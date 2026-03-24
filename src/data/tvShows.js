@@ -87,6 +87,15 @@ const tvShows = [
       rating: 4,
       watchedBy: ["christian"]
     },
+    {
+      id: 11,
+      title: "Omicidio a Easttown",
+      image: "https://image.tmdb.org/t/p/w1280/mHo53ZpCwxpEFEwhAjw7cbZzQfC.jpg",
+      note: "N/A",
+      watched: true,
+      rating: 4,
+      watchedBy: ["christian"]
+    },
   ]
   
   export default tvShows
