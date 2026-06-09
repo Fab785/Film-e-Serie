@@ -432,7 +432,7 @@ const movies = [
       note: "Film che conclude la saga. Sinceramente mi ha lasciato un pò con l'amaro in bocca. Il film è buono ma rispetto agli altri c è molta meno azione nonostante la durata (quasi 3 ore). Forse è dovuto al fatto che è un film conslusivo ma preferisco gli altri che sono più ritmati. Diciamo che alla fine comunque ci sta",
       watched: true,
       rating: 3,
-      watchedBy: ["fabrizio"]
+      watchedBy: ["christian"]
     },
 
     
