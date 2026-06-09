@@ -425,6 +425,15 @@ const movies = [
       rating: 3,
       watchedBy: ["fabrizio"]
     },
+   {
+      id: 48,
+      title: "Mission Impossible - The Final Reckoning",
+      image: "https://image.tmdb.org/t/p/w1280/semFxuYx6HcrkZzslgAkBqfJvZk.jpg",
+      note: "",
+      watched: true,
+      rating: 3,
+      watchedBy: ["fabrizio"]
+    },
 
     
     // add 200+ safely here
