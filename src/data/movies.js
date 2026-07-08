@@ -171,7 +171,7 @@ const movies = [
       note: "Originale, merita",
       watched: true,
       rating: 4,
-      watchedBy: ["christian"]
+      watchedBy: ["christian", "fabrizio"]
     },
     {
       id: 20,
