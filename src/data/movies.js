@@ -437,10 +437,10 @@ const movies = [
    {
       id: 49,
       title: "Leopard Skin",
-      image: "https://image.tmdb.org/t/p/w1280/iKPsC9EFUafRP9SrUznI61getVP.jpg",
+      image: "https://image.tmdb.org/t/p/w1280/5U5EscRz89quJnLdNgLEbhQtO18.jpg",
       note: "Parte alla grande con scene incastrate bene ma il finale non mi ha convinto ed alla fine non mantiene le promesse. Per come inizia avrei sperato in qualcosa di meglio",
       watched: true,
-      rating: 3,
+      rating: 2,
       watchedBy: ["christian"]
     },
 
