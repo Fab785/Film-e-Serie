@@ -447,9 +447,9 @@ const movies = [
       id: 50,
       title: "The Rip",
       image: "https://image.tmdb.org/t/p/w1280/4wsYWH73Hb1B6noGIFaRQSAkuXj.jpg",
-      note: "Parte alla grande con scene incastrate bene ma il finale non mi ha convinto ed alla fine non mantiene le promesse. Per come inizia avrei sperato in qualcosa di meglio",
+      note: "Bel film, asciutto, bella sorpresa. Non me lo aspettavo.",
       watched: true,
-      rating: 2,
+      rating: 5,
       watchedBy: ["christian"]
     },
 
