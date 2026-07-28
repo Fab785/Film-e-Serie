@@ -456,7 +456,7 @@ const movies = [
       id: 51,
       title: "The Fabelmans",
       image: "https://image.tmdb.org/t/p/w1280/h7llKkqkkJtJrTOaDLuVeUYDQ7I.jpg",
-      note: "Bel film, asciutto, bella sorpresa. Non me lo aspettavo.",
+      note: "Veramente bel film di Spielberg e su Spielberg. Merita senza alcun dubbio. Più che promosso!!",
       watched: true,
       rating: 5,
       watchedBy: ["christian"]
