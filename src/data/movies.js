@@ -452,6 +452,15 @@ const movies = [
       rating: 5,
       watchedBy: ["christian"]
     },
+   {
+      id: 51,
+      title: "The Rip",
+      image: "https://image.tmdb.org/t/p/w1280/4wsYWH73Hb1B6noGIFaRQSAkuXj.jpg",
+      note: "Bel film, asciutto, bella sorpresa. Non me lo aspettavo.",
+      watched: true,
+      rating: 5,
+      watchedBy: ["christian"]
+    },
 
     
     // add 200+ safely here
