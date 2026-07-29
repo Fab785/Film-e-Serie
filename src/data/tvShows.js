@@ -103,7 +103,7 @@ const tvShows = [
       note: "Questa volta Netflix si è superato! Serie ottima e di alto livello. Non una serie per tutti",
       watched: true,
       rating: 4,
-      watchedBy: ["christian"]
+      watchedBy: ["fabrizio"]
     },
   ]
   
