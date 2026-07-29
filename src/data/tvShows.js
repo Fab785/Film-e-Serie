@@ -99,8 +99,8 @@ const tvShows = [
     {
       id: 12,
       title: "Monster: La storia di Ed Gein",
-      image: "https://www.themoviedb.org/tv/115004-mare-of-easttown",
-      note: "N/A",
+      image: "https://image.tmdb.org/t/p/w1280/iDHzRALtZCzHVmx7uyjTTKvMAPB.jpg",
+      note: "Questa volta Netflix si è superato! Serie ottima e di alto livello. Non una serie per tutti",
       watched: true,
       rating: 4,
       watchedBy: ["christian"]
