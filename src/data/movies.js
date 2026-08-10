@@ -463,7 +463,7 @@ const movies = [
     },
    {
       id: 52,
-      title: "The Fabelmans",
+      title: "Masters of the Universe",
       image: "https://image.tmdb.org/t/p/w1280/h7llKkqkkJtJrTOaDLuVeUYDQ7I.jpg",
       note: "Veramente bel film di Spielberg e su Spielberg. Merita senza alcun dubbio. Più che promosso!!",
       watched: true,
